@@ -7,28 +7,16 @@ public class GunData : ScriptableObject
 {
     public float damage;
     public int maxAmmo;
-    public int currentAmmo;
     public float reloadTime;
     public float fireRate;
+    [SerializeField] private AmmoType ammoType;
 
-    public void Fire()
-    {
-        if (currentAmmo > 0)
-        {
-            currentAmmo--;
-            Debug.Log("Pew!");
-        }
-        else
-        {
-            Debug.Log("Click!");
-        }
-    }
 
-    public IEnumerator Reload()
+    public enum AmmoType
     {
-        Debug.Log("Reloading...");
-        yield return new WaitForSeconds(reloadTime);
-        currentAmmo = maxAmmo;
-        Debug.Log("Reloaded!");
+        Light,
+        Medium,
+        Shells,
+        Heavy
     }
 }
