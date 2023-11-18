@@ -9,7 +9,7 @@ public class GunData : ScriptableObject
     public int maxAmmo;
     public float reloadTime;
     public float fireRate;
-    [SerializeField] private AmmoType ammoType;
+    public AmmoType ammoType;
 
 
     public enum AmmoType
