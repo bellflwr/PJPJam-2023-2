@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 2500514520836076573}
   - component: {fileID: 2162268433005911821}
   - component: {fileID: 6610730772837213418}
+  - component: {fileID: 7262538242776407375}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -273,3 +274,18 @@ MonoBehaviour:
   playerBody: {fileID: 6584943473815222025}
   mouseSensitivity: 1000
   fovTransitionSpeed: 1
+--- !u!114 &7262538242776407375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8282460740007974010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1030f29e48b9af10e9263568b9526e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 128
