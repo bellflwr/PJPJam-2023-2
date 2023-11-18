@@ -9,5 +9,6 @@ public class StaticData : MonoBehaviour
 
     public static int lightAmmo = 0;
     public static int mediumAmmo = 0;
+    public static int shellsAmmo = 0;
     public static int heavyAmmo = 0;
 }
