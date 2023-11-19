@@ -63,20 +63,18 @@ public class EnemySpawner : MonoBehaviour
         }
 
         
-        float yPosition = Terrain.activeTerrain.SampleHeight(new Vector3(transform.position.x + randomX, 0, transform.position.z + randomZ)) + 5;
+        float yPosition = Terrain.activeTerrain.SampleHeight(new Vector3(transform.position.x + randomX, 0, transform.position.z + randomZ));
 
         Vector3 randomPosition = new Vector3(transform.position.x + randomX, yPosition, transform.position.x + randomZ);
         GameObject enemy = Instantiate(enemyPrefab[UnityEngine.Random.Range(0, enemyPrefab.Length - 1)], randomPosition, Quaternion.identity);
-        enemy.GetComponent<EnemyMovement>().target = gameObject.transform;
+        
         
         Vector3 point;
-        if(RandomPoint(transform.position, 5, out point))
+        if(RandomPoint(enemy.transform.position, 10, out point))
         {
-            point.y += 2;
             enemy.transform.position = point;
+            enemy.GetComponent<EnemyMovement>().target = gameObject.transform;
         }
-
-        enemy.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 0);
     }
 
     void Update()

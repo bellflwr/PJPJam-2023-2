@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if(isGrounded && false)
+        if(isGrounded)
         {
             if (enemyData.ranged)
             {
@@ -42,6 +42,11 @@ public class EnemyMovement : MonoBehaviour
                 agent.destination = target.position;
             }
         }
+
+        if(transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
         
         
         if (timeForGrounded > 1)
@@ -49,11 +54,12 @@ public class EnemyMovement : MonoBehaviour
             isGrounded = true;
         }
 
-        if(gameObject.GetComponent<Rigidbody>().velocity.y == 0)
+        if(gameObject.GetComponent<Rigidbody>().velocity.y <= 2 && gameObject.GetComponent<Rigidbody>().velocity.y >= -2)
         {
             timeForGrounded += Time.deltaTime;
         } else if(!isGrounded){
             timeForGrounded = 0;
         }
+        Debug.Log(GetComponent<Rigidbody>().velocity.y);
     }
 }
