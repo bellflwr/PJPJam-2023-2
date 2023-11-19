@@ -18,4 +18,5 @@ MonoBehaviour:
   fireInterval: 0.33
   ammoType: 0
   automatic: 0
-  burst: 0
+  burst: 1
+  burstInterval: 0
