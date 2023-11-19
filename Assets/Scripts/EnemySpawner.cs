@@ -71,7 +71,7 @@ public class EnemySpawner : MonoBehaviour
         
         
         Vector3 point;
-        if(RandomPoint(enemy.transform.position, 10, out point))
+        if(RandomPoint(enemy.transform.position, 20, out point))
         {
             enemy.transform.position = point;
         }
