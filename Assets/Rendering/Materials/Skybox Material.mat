@@ -46,6 +46,7 @@ Material:
     - _Star_Height: 489.3
     - _Star_Intensity: 15.7
     - _Star_Power: 18
+    - _Star_Speed: 6.18
     m_Colors:
     - _Ground_Color: {r: 0.1745283, g: 0.2419948, b: 1, a: 0}
     - _Horizontal_Color: {r: 0.16509432, g: 0.6922306, b: 1, a: 0}
