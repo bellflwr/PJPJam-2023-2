@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63d2775d4f34f4e4798c018bb5512fd0, type: 3}
-  m_Name: 1
+  m_Name: 13
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 11400000, guid: 814f8c7bf55b70f4d8ef53b7e3cef57f, type: 2}
   - {fileID: 11400000, guid: 116eca66a1f375f4abcf54e051f53910, type: 2}
-  perRound: 0300000003000000
+  perRound: 1d0000001e000000
