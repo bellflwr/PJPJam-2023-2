@@ -8,8 +8,11 @@ public class GunData : ScriptableObject
     public float damage;
     public int maxAmmo;
     public float reloadTime;
-    public float fireRate;
+    public float fireInterval;
     public AmmoType ammoType;
+    public bool automatic;
+    public bool burst;
+
 
 
     public enum AmmoType

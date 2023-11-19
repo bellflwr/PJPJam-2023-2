@@ -5,16 +5,18 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public Transform player;
+    public EnemyData enemyData;
+    public Transform target;
     private NavMeshAgent agent;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.destination = target.position;
     }
 
     void Update()
     {
-        agent.destination = player.position;
+        
     }
 }
