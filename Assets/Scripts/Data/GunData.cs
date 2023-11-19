@@ -13,6 +13,7 @@ public class GunData : ScriptableObject
     public bool automatic;
     public int burst;
     public float burstInterval;
+    public AudioClip audio;
 
 
 

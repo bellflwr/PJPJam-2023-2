@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,14 +8,22 @@ public class GunController : MonoBehaviour
     public LayerMask hitLayer;
     private float _lastBurst = 0;
 
+    private GunInstance _gun;
+    private AudioSource _audioSource;
+
+    private void Start()
+    {
+        ChangeGun(0);
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
-        GunInstance gun = StaticData.guns[StaticData.currentGun];
-        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0) && gun.gunData.automatic) && gun.loaded > 0)
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0) && _gun.stats.automatic))
         {
-            if (Time.time - _lastBurst > gun.gunData.fireInterval)
+            if (Time.time - _lastBurst > _gun.stats.fireInterval)
             {
-                StartCoroutine(Burst(gun.gunData.burst, gun.gunData.burstInterval));
+                StartCoroutine(Burst(_gun.stats.burst, _gun.stats.burstInterval));
             }
         }
     }
@@ -34,12 +43,26 @@ public class GunController : MonoBehaviour
 
     void Shoot()
     {
+        if (_gun.loaded <= 0)
+        {
+            return;
+        }
+        
+        _audioSource.PlayOneShot(_gun.stats.audio, 0.5f);
+        
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 100f, hitLayer))
         {
-            // Destroy(hit.transform.gameObject);
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance,
                 Color.yellow);
         }
+
+        _gun.loaded -= 1;
+    }
+
+    void ChangeGun(int num)
+    {
+        StaticData.currentGun = num;
+        _gun = StaticData.guns[StaticData.currentGun];
     }
 }

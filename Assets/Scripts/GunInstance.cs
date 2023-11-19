@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GunInstance
 {
-    public GunData gunData;
+    public GunData stats;
     public int loaded;
 
     public static GunInstance CreateLoaded(GunData data) {
         GunInstance gi = new GunInstance();
-        gi.gunData = data;
+        gi.stats = data;
         gi.loaded = data.maxAmmo;
         return gi;
     }
