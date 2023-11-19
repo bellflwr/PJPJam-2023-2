@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {
     public float maxHealth;
+    public float damage;
+    public float hitrate;
     public float speed;
     public bool ranged;
     public float range;

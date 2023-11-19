@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour
     public bool isGrounded = false;
     public float timeForGrounded = 0;
     [SerializeField] private bool barnTouched;
+    public bool doneMoving;
 
     void Start()
     {
@@ -18,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemyData.speed;
         Rigidbody rb = GetComponent<Rigidbody>();
-
+        doneMoving = false;
         rb.velocity = new Vector3(rb.velocity.x, -1, rb.velocity.z);
     }
 
@@ -38,6 +39,7 @@ public class EnemyMovement : MonoBehaviour
                 if(Vector3.Distance(transform.position, target.position) <= enemyData.range)
                 {
                     agent.destination = transform.position;
+                    doneMoving = true;
                 }
                 else
                 {
@@ -75,6 +77,7 @@ public class EnemyMovement : MonoBehaviour
         if(other.gameObject.tag == "Barn")
         {
             agent.destination = transform.position;
+            doneMoving = true;
         }
     }
 }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -7600463418179000192}
   - component: {fileID: 7170322338707962617}
   - component: {fileID: -2002430648085412709}
+  - component: {fileID: -2850081817629117374}
   m_Layer: 7
   m_Name: Dandilion
   m_TagString: Enemy
@@ -145,6 +146,7 @@ MonoBehaviour:
   isGrounded: 0
   timeForGrounded: 0
   barnTouched: 0
+  doneMoving: 0
 --- !u!195 &7170322338707962617
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -190,3 +192,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2850081817629117374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792314665902954066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767c3e06801e9b74585287ba5ec446f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitrate: 0
