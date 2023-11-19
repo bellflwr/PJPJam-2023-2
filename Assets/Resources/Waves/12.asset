@@ -15,4 +15,4 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 814f8c7bf55b70f4d8ef53b7e3cef57f, type: 2}
   - {fileID: 11400000, guid: 116eca66a1f375f4abcf54e051f53910, type: 2}
-  perRound: 1a0000001c000000
+  totalEnemies: 42
