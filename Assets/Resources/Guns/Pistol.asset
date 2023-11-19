@@ -15,7 +15,7 @@ MonoBehaviour:
   damage: 10
   maxAmmo: 16
   reloadTime: 1.25
-  fireInterval: 0.5
+  fireInterval: 0.1
   ammoType: 0
   automatic: 0
   burst: 1

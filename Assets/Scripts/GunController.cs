@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GunController : MonoBehaviour
 {
@@ -47,7 +48,8 @@ public class GunController : MonoBehaviour
         {
             return;
         }
-        
+
+        _audioSource.pitch = Random.Range(0.8f, 1.2f);
         _audioSource.PlayOneShot(_gun.stats.audio, 0.5f);
         
         RaycastHit hit;
