@@ -16,14 +16,14 @@ RenderSettings:
   serializedVersion: 9
   m_Fog: 1
   m_FogColor: {r: 0.09019608, g: 0.32156864, b: 0.5686275, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.002
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_FogMode: 1
+  m_FogDensity: 0.003
+  m_LinearFogStart: 81
+  m_LinearFogEnd: 713
+  m_AmbientSkyColor: {r: 0.7216981, g: 1, b: 0.96983653, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.3
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: ff1a9d2bd18450044aa664acb63d9374, type: 2}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.081383266, g: 0.45991963, b: 0.7493267, a: 1}
+  m_IndirectSpecularColor: {r: 0.08225224, g: 0.19823644, b: 0.5449189, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -398,14 +398,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392639101}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11136068, y: -0, z: -0, w: 0.9937801}
+  m_LocalRotation: {x: 0.14001703, y: -0, z: -0, w: 0.99014914}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1546328720}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 12.788, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1456.098, y: 0, z: 0}
 --- !u!1 &438425135
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +498,110 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!1001 &563479250
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 627926239544783760, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_Name
+      value: MusicController
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067412824125129478, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6f092e09a846f34791450cb4eb27694, type: 3}
+--- !u!1 &1232358328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1232358330}
+  - component: {fileID: 1232358329}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1232358329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232358328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ac357acc756cb44b2d524207692973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultGun: {fileID: 11400000, guid: ebef6d012f5e35c479662ecd88ac17a7, type: 2}
+  directionalLight: {fileID: 1546328720}
+  sunDirection: {x: 0, y: 0, z: 0}
+--- !u!4 &1232358330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232358328}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13214336, y: 3.9289176, z: -1.5451359}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1546328718
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,13 +691,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546328718}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.31895936, y: 0, z: 0, w: -0.94776845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 392639102}
-  m_LocalEulerAnglesHint: {x: 397.2, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1546328721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,63 +734,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skybox: {fileID: 2100000, guid: ff1a9d2bd18450044aa664acb63d9374, type: 2}
---- !u!1001 &1577152586
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 746.51715
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10.81
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 815.26404
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
-      propertyPath: m_Name
-      value: Pistol
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dcdd6d6174008a64b9a9378ba9932110, type: 3}
 --- !u!1001 &1985110207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -781,8 +828,8 @@ MonoBehaviour:
   grassPrefabs:
   - enabled: 1
     name: grass01
-    seed: 48993
-    probability: 20
+    seed: 662
+    probability: 81.3
     collisionCheck: 0
     rejectUnderwater: 0
     heightRange: {x: 0, y: 1000}
@@ -791,8 +838,11 @@ MonoBehaviour:
     layerMasks:
     - name: Grass_layer
       layerID: 0
-      threshold: 0.45
-    instanceCount: 208627
+      threshold: 0
+    - name: Moss_layer
+      layerID: 1
+      threshold: 0.403
+    instanceCount: 850159
     index: 0
     type: 1
     renderAsBillboard: 0
@@ -802,14 +852,107 @@ MonoBehaviour:
     alignToGround: 100
     positionJitter: 0
     useDensityScaling: 1
-    density: 5
+    density: 2.5
     billboard: {fileID: 2800000, guid: 91a1945982e98be4d9fe3e3d12fdebd8, type: 3}
+    mainColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+    secondaryColor: {r: 0.9534128, g: 1, b: 0.3820755, a: 1}
+    linkColors: 1
+    minMaxHeight: {x: 0.5, y: 1}
+    minMaxWidth: {x: 0.8, y: 1.2}
+    noiseSize: 160.07
+  - enabled: 1
+    name: grass02
+    seed: 2634
+    probability: 20.2
+    collisionCheck: 0
+    rejectUnderwater: 0
+    heightRange: {x: 0, y: 1000}
+    slopeRange: {x: 0, y: 60}
+    curvatureRange: {x: 0, y: 1}
+    layerMasks:
+    - name: Grass_layer
+      layerID: 0
+      threshold: 0
+    - name: Moss_layer
+      layerID: 1
+      threshold: 1
+    instanceCount: 211386
+    index: 1
+    type: 1
+    renderAsBillboard: 0
+    prefab: {fileID: 0}
+    gpuInstancing: 1
+    holeEdgePadding: 2
+    alignToGround: 100
+    positionJitter: 0
+    useDensityScaling: 1
+    density: 2.6
+    billboard: {fileID: 2800000, guid: cf3069941001b5c46b1f13d4551d0fd9, type: 3}
     mainColor: {r: 1, g: 1, b: 1, a: 1}
     secondaryColor: {r: 1, g: 1, b: 1, a: 1}
     linkColors: 1
     minMaxHeight: {x: 0.5, y: 1}
     minMaxWidth: {x: 0.8, y: 1.2}
-    noiseSize: 150.2
+    noiseSize: 0.1
+  - enabled: 1
+    name: grassFlower01
+    seed: 6692
+    probability: 4.7
+    collisionCheck: 0
+    rejectUnderwater: 0
+    heightRange: {x: 0, y: 1000}
+    slopeRange: {x: 0, y: 60}
+    curvatureRange: {x: 0, y: 1}
+    layerMasks:
+    - name: Dry_Dirt_layer
+      layerID: 2
+      threshold: 1
+    instanceCount: 0
+    index: 2
+    type: 1
+    renderAsBillboard: 0
+    prefab: {fileID: 0}
+    gpuInstancing: 1
+    holeEdgePadding: 2
+    alignToGround: 100
+    positionJitter: 0
+    useDensityScaling: 1
+    density: 1.69
+    billboard: {fileID: 2800000, guid: 5733619f617fd954cac22d3d11fd1b93, type: 3}
+    mainColor: {r: 1, g: 1, b: 1, a: 1}
+    secondaryColor: {r: 1, g: 1, b: 1, a: 1}
+    linkColors: 1
+    minMaxHeight: {x: 0.5, y: 1}
+    minMaxWidth: {x: 0.8, y: 1.2}
+    noiseSize: 6.75
+  - enabled: 1
+    name: grassFlower02
+    seed: 67671
+    probability: 15.5
+    collisionCheck: 0
+    rejectUnderwater: 0
+    heightRange: {x: 0, y: 1000}
+    slopeRange: {x: 0, y: 60}
+    curvatureRange: {x: 0, y: 1}
+    layerMasks: []
+    instanceCount: 161632
+    index: 3
+    type: 1
+    renderAsBillboard: 0
+    prefab: {fileID: 0}
+    gpuInstancing: 1
+    holeEdgePadding: 2
+    alignToGround: 100
+    positionJitter: 0
+    useDensityScaling: 1
+    density: 1.35
+    billboard: {fileID: 2800000, guid: b0601839c4520064bb61d58d088810bc, type: 3}
+    mainColor: {r: 1, g: 1, b: 1, a: 1}
+    secondaryColor: {r: 1, g: 1, b: 1, a: 1}
+    linkColors: 1
+    minMaxHeight: {x: 0.5, y: 1}
+    minMaxWidth: {x: 0.8, y: 1.2}
+    noiseSize: 0.1
   terrainSettings:
     drawTreesAndFoliage: 1
     preservePrefabLayer: 1
@@ -857,10 +1000,11 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1232358330}
   - {fileID: 392639102}
   - {fileID: 101988243}
   - {fileID: 1985110207}
   - {fileID: 2146247050}
   - {fileID: 315528785}
   - {fileID: 104303399}
-  - {fileID: 1577152586}
+  - {fileID: 563479250}

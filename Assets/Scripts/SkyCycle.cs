@@ -9,6 +9,6 @@ public class SkyCycle : MonoBehaviour
 
     private void Update()
     {
-        skybox.SetVector(name="_MainLightDirection", transform.forward);
-    }   
+        skybox.SetVector(name = "_MainLightDirection", transform.forward);
+    }
 }

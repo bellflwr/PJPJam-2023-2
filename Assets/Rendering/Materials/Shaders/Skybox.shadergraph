@@ -38,6 +38,9 @@
         },
         {
             "m_Id": "420a78eb81f045db813281011a61d8c0"
+        },
+        {
+            "m_Id": "c6e9aba0829b4664a723afa898db0ff7"
         }
     ],
     "m_Keywords": [],
@@ -161,6 +164,9 @@
         },
         {
             "m_Id": "ada6b5e8153f43b5a74904d498bebda8"
+        },
+        {
+            "m_Id": "795a98a0e94f452e9dca52263e5c33e0"
         }
     ],
     "m_GroupDatas": [],
@@ -458,6 +464,20 @@
                     "m_Id": "3e9422742b7d48a8bcc10640d87363fc"
                 },
                 "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "795a98a0e94f452e9dca52263e5c33e0"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "c3a47ae31a83473a9ffe1ec1985fc52e"
+                },
+                "m_SlotId": 1350992410
             }
         },
         {
@@ -2094,10 +2114,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2147.0,
-            "y": -614.0000610351563,
+            "x": -2166.0,
+            "y": -742.0,
             "width": 145.0,
-            "height": 34.00006103515625
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -2208,8 +2228,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2136.0,
-            "y": -682.0,
+            "x": -2155.0,
+            "y": -810.0,
             "width": 134.0,
             "height": 34.0
         }
@@ -2389,6 +2409,21 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "58f8e8d6aba94ee69298e123fc863d26",
+    "m_Id": 0,
+    "m_DisplayName": "Star Speed",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
 }
 
 {
@@ -3027,6 +3062,42 @@
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "795a98a0e94f452e9dca52263e5c33e0",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -2154.0,
+            "y": -708.0,
+            "width": 133.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "58f8e8d6aba94ee69298e123fc863d26"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "c6e9aba0829b4664a723afa898db0ff7"
     }
 }
 
@@ -3787,6 +3858,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "9e9b9a263fa741b5ae9b7f0091cf33b9",
+    "m_Id": 1350992410,
+    "m_DisplayName": "Star Speed",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Star_Speed",
+    "m_StageCapability": 3,
+    "m_Value": 1.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "9f59ffa81cdb4060b3fb469c845b2d97",
     "m_Id": 2,
@@ -4259,6 +4345,9 @@
         },
         {
             "m_Id": "420a78eb81f045db813281011a61d8c0"
+        },
+        {
+            "m_Id": "c6e9aba0829b4664a723afa898db0ff7"
         }
     ]
 }
@@ -4295,6 +4384,9 @@
             "m_Id": "8cb93e74ec74438c8bd6c52d362922bc"
         },
         {
+            "m_Id": "9e9b9a263fa741b5ae9b7f0091cf33b9"
+        },
+        {
             "m_Id": "428c19f42f414f7d908591575199ae66"
         }
     ],
@@ -4311,13 +4403,15 @@
         "d39d34a0-1509-4136-b785-2e70afa5b308",
         "ba51e5fb-aacc-4a71-b58a-617085df4ac7",
         "adfb3c82-bbf6-441f-aa07-eef2828a140b",
-        "a49fd6aa-bc61-4e58-b619-ad3148403a87"
+        "a49fd6aa-bc61-4e58-b619-ad3148403a87",
+        "d61d0327-8e49-40d8-9e48-c164ea4782a2"
     ],
     "m_PropertyIds": [
         -365559375,
         1191909895,
         270404188,
-        1548759861
+        1548759861,
+        1350992410
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -4366,6 +4460,34 @@
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "c6e9aba0829b4664a723afa898db0ff7",
+    "m_Guid": {
+        "m_GuidSerialized": "dfd267b6-ad28-4e6a-a393-3329b8fc2b20"
+    },
+    "m_Name": "Star Speed",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Star Speed",
+    "m_DefaultReferenceName": "_Star_Speed",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 1.0,
+    "m_FloatType": 1,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 10.0
     }
 }
 
@@ -4658,8 +4780,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2135.0,
-            "y": -648.0,
+            "x": -2154.0,
+            "y": -776.0,
             "width": 133.0,
             "height": 34.0
         }
