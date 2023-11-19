@@ -19,4 +19,8 @@ public class GunData : ScriptableObject
         Shells,
         Heavy
     }
+
+    public static GunData GetGun(string name) {
+        return Resources.Load<GunData>("Guns/" + name);
+    }
 }
