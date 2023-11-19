@@ -16,6 +16,9 @@ public class GunData : ScriptableObject
     public int pellets;
     public float precision;
     public AudioClip audio;
+    public AudioClip click;
+    public AudioClip reloadStart;
+    public AudioClip reloadEnd;
 
 
 
