@@ -30,6 +30,7 @@ public class EnemySpawner : MonoBehaviour
         waveNumber++;
         wave = Resources.Load<Wave>("Waves/" + waveNumber);
         enemiesLeft = wave.totalEnemies;
+        maxEnemies = wave.totalEnemies;
     }
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)

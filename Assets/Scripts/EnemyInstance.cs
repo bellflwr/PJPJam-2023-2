@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyInstance : MonoBehaviour
 {
     [SerializeField] private EnemyData enemyData;
+    private EnemySpawner enemySpawner;
     private float _health;
 
     public float Health
@@ -20,12 +21,14 @@ public class EnemyInstance : MonoBehaviour
     public void Awake()
     {
         Health = enemyData.maxHealth;
+        enemySpawner = GameObject.Find("Barn").GetComponent<EnemySpawner>();
     }
 
     void CheckAlive()
     {
         if (_health <= 0)
         {
+            enemySpawner.enemiesLeft--;
             Destroy(gameObject);
         }
     }
