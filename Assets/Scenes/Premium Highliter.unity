@@ -200,7 +200,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.33333334
+  m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 44b2728f784229b44b5982b71f5739fb, type: 2}
   m_BuildHeightMesh: 0
@@ -286,8 +286,8 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 3792314665902954066, guid: dc52ce389cd6ed748a86162969ea7288, type: 3}
   - {fileID: 4570146551262137421, guid: 0696eae14212da444a79d5cb0d2857a5, type: 3}
-  minSpawnRadius: 50
-  maxSpawnRadius: 100
+  minSpawnRadius: 100
+  maxSpawnRadius: 150
   wave: {fileID: 0}
   waveNumber: 0
   enemiesLeft: 0
@@ -671,7 +671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6584943473815222025, guid: 6230431a6a21ae240b194981f028923f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1006.6
+      value: 698.7
       objectReference: {fileID: 0}
     - target: {fileID: 6584943473815222025, guid: 6230431a6a21ae240b194981f028923f, type: 3}
       propertyPath: m_LocalPosition.y
