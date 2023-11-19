@@ -878,7 +878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26faa864a5024841b910f0e96b1e1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 884948829}
+  enemyData: {fileID: 11400000, guid: 116eca66a1f375f4abcf54e051f53910, type: 2}
+  target: {fileID: 884948829}
 --- !u!195 &2117344056
 NavMeshAgent:
   m_ObjectHideFlags: 0
