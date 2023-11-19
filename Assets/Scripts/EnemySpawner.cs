@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public float maxSpawnRadius;
     public Wave wave;
     public int waveNumber;
-    int maxEnemies;
+    [SerializeField] int maxEnemies;
     public int enemiesLeft;
     public float spawnInterval;
     public float maxSpawnInterval;
@@ -67,6 +67,7 @@ public class EnemySpawner : MonoBehaviour
 
         Vector3 randomPosition = new Vector3(transform.position.x + randomX, yPosition, transform.position.x + randomZ);
         GameObject enemy = Instantiate(enemyPrefab[UnityEngine.Random.Range(0, enemyPrefab.Length)], randomPosition, Quaternion.identity);
+        print("test");
         enemy.GetComponent<EnemyMovement>().target = gameObject.transform;
         
         
@@ -79,6 +80,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
+        
         if (enemiesLeft > 0)
         {
             if(maxEnemies > 0)

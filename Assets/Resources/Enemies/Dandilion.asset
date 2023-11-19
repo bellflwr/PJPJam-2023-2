@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0c59560db56ca4a9ef2d093486f205, type: 3}
   m_Name: Dandilion
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 100
   speed: 20
   ranged: 0
   range: 0
