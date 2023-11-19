@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef84027b7099ec84e809ccc91010b2b9, type: 3}
-  m_Name: ShotGun
+  m_Script: {fileID: 11500000, guid: 63d2775d4f34f4e4798c018bb5512fd0, type: 3}
+  m_Name: 1
   m_EditorClassIdentifier: 
-  damage: 10
-  maxAmmo: 8
-  reloadTime: 1.5
-  fireInterval: 1
-  ammoType: 2
-  automatic: 0
-  burst: 0
+  enemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  perRound: 0000000000000000
