@@ -5,10 +5,28 @@ using UnityEngine;
 public class EnemyInstance : MonoBehaviour
 {
     [SerializeField] private EnemyData enemyData;
-    public float health;
+    private float _health;
+
+    public float Health
+    {
+        get => _health;
+        set
+        {
+            _health = value;
+            CheckAlive();
+        }
+    }
 
     public void Awake()
     {
-        health = enemyData.maxHealth;
+        Health = enemyData.maxHealth;
+    }
+
+    void CheckAlive()
+    {
+        if (_health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
