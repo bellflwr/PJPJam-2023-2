@@ -8,26 +8,58 @@ public class EnemyMovement : MonoBehaviour
     public EnemyData enemyData;
     public Transform target;
     private NavMeshAgent agent;
+    public bool isGrounded = false;
+    public float timeForGrounded = 0;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemyData.speed;
-        agent.destination = target.position;
+        Rigidbody rb = GetComponent<Rigidbody>();
+
+        rb.velocity = new Vector3(rb.velocity.x, -1, rb.velocity.z);
     }
+
+     
 
     void Update()
     {
-        if (enemyData.ranged)
+        if(isGrounded)
         {
-            if(Vector3.Distance(transform.position, target.position) <= enemyData.range)
+            if (enemyData.ranged)
             {
-                agent.destination = transform.position;
-            }
+                if(Vector3.Distance(transform.position, target.position) <= enemyData.range)
+                {
+                    agent.destination = transform.position;
+                }
+                else
+                {
+                    agent.destination = target.position;
+                }
+            } 
             else
             {
                 agent.destination = target.position;
             }
         }
+
+        if(transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
+        
+        
+        if (timeForGrounded > 1)
+        {
+            isGrounded = true;
+        }
+
+        if(gameObject.GetComponent<Rigidbody>().velocity.y <= 2 && gameObject.GetComponent<Rigidbody>().velocity.y >= -2)
+        {
+            timeForGrounded += Time.deltaTime;
+        } else if(!isGrounded){
+            timeForGrounded = 0;
+        }
+        Debug.Log(GetComponent<Rigidbody>().velocity.y);
     }
 }

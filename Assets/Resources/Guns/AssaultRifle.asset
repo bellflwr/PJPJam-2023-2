@@ -15,7 +15,9 @@ MonoBehaviour:
   damage: 30
   maxAmmo: 30
   reloadTime: 1.5
-  fireInterval: 0
+  fireInterval: 0.1
   ammoType: 1
   automatic: 1
-  burst: 0
+  burst: 1
+  burstInterval: 0
+  audio: {fileID: 8300000, guid: 8525218ca27058e4dab21941b901e9a0, type: 3}

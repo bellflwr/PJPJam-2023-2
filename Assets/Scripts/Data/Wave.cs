@@ -6,5 +6,5 @@ using UnityEngine;
 public class Wave : ScriptableObject
 {
     public List<EnemyData> enemies;
-    public List<int> perRound;
+    public int totalEnemies;
 }

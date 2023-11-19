@@ -11,7 +11,9 @@ public class GunData : ScriptableObject
     public float fireInterval;
     public AmmoType ammoType;
     public bool automatic;
-    public bool burst;
+    public int burst;
+    public float burstInterval;
+    public AudioClip audio;
 
 
 
