@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Dandilion
   m_EditorClassIdentifier: 
   maxHealth: 0
-  speed: 5
+  speed: 20
   ranged: 0
   range: 0

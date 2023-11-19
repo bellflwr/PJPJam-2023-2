@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PuffBall
   m_EditorClassIdentifier: 
   maxHealth: 0
-  speed: 80
+  speed: 15
   ranged: 1
-  range: 5
+  range: 20
