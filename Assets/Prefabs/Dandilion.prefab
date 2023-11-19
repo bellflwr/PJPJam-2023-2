@@ -164,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 814f8c7bf55b70f4d8ef53b7e3cef57f, type: 2}
   target: {fileID: 0}
+  timeForGrounded: 0
 --- !u!195 &7170322338707962617
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -184,5 +185,5 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
