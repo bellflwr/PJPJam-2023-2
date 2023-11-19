@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AssaultRifle
   m_EditorClassIdentifier: 
   damage: 5
-  maxAmmo: 30
+  maxAmmo: 20
   reloadTime: 1.5
   fireInterval: 0.1
   ammoType: 1

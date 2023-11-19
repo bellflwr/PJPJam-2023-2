@@ -26,7 +26,12 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if(isGrounded && !barnTouched)
+        if(target == null)
+        {
+            agent.destination = transform.position;
+        }
+
+        if(isGrounded && !barnTouched && target != null)
         {
             if (enemyData.ranged)
             {

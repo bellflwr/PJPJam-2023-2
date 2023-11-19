@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BurstRifle
   m_EditorClassIdentifier: 
   damage: 8
-  maxAmmo: 27
+  maxAmmo: 15
   reloadTime: 1.5
   fireInterval: 0.4
   ammoType: 1

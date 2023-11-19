@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: -7600463418179000192}
   - component: {fileID: 7170322338707962617}
   - component: {fileID: -2002430648085412709}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dandilion
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 814f8c7bf55b70f4d8ef53b7e3cef57f, type: 2}
-  health: 0
 --- !u!54 &8266856117735499304
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,7 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 814f8c7bf55b70f4d8ef53b7e3cef57f, type: 2}
   target: {fileID: 0}
+  isGrounded: 0
   timeForGrounded: 0
+  barnTouched: 0
 --- !u!195 &7170322338707962617
 NavMeshAgent:
   m_ObjectHideFlags: 0
