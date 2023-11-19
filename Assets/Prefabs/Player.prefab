@@ -290,7 +290,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+  bulletHole: {fileID: 1463791038739016030, guid: 6e22d9c3f1516704682ae712759bbd3e, type: 3}
 --- !u!114 &4154184022768298389
 MonoBehaviour:
   m_ObjectHideFlags: 0

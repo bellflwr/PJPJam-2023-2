@@ -20,4 +20,6 @@ MonoBehaviour:
   automatic: 0
   burst: 1
   burstInterval: 0
+  pellets: 1
+  precision: 0
   audio: {fileID: 8300000, guid: 8525218ca27058e4dab21941b901e9a0, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef84027b7099ec84e809ccc91010b2b9, type: 3}
   m_Name: ShotGun
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 3
   maxAmmo: 8
   reloadTime: 1.5
   fireInterval: 1
@@ -20,4 +20,6 @@ MonoBehaviour:
   automatic: 0
   burst: 1
   burstInterval: 0
+  pellets: 5
+  precision: 3
   audio: {fileID: 8300000, guid: 8525218ca27058e4dab21941b901e9a0, type: 3}

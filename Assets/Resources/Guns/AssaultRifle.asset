@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef84027b7099ec84e809ccc91010b2b9, type: 3}
   m_Name: AssaultRifle
   m_EditorClassIdentifier: 
-  damage: 30
+  damage: 5
   maxAmmo: 30
   reloadTime: 1.5
   fireInterval: 0.1
@@ -20,4 +20,6 @@ MonoBehaviour:
   automatic: 1
   burst: 1
   burstInterval: 0
+  pellets: 1
+  precision: 5
   audio: {fileID: 8300000, guid: 8525218ca27058e4dab21941b901e9a0, type: 3}

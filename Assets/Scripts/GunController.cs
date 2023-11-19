@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 public class GunController : MonoBehaviour
 {
     public LayerMask hitLayer;
+    public GameObject bulletHole;
+
     private float _lastBurst = 0;
 
     private GunInstance _gun;
@@ -24,24 +26,31 @@ public class GunController : MonoBehaviour
         {
             if (Time.time - _lastBurst > _gun.stats.fireInterval)
             {
-                StartCoroutine(Burst(_gun.stats.burst, _gun.stats.burstInterval));
+                StartCoroutine(Burst());
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
         }
     }
 
-    IEnumerator Burst(int times, float interval)
+    IEnumerator Burst()
     {
         _lastBurst = Time.time;
 
         int i = 0;
-        while (i < times)
+        while (i < _gun.stats.burst)
         {
             Shoot();
-            yield return new WaitForSeconds(interval); //wait 1 second per interval
+
+            yield return new WaitForSeconds(_gun.stats.burstInterval); //wait 1 second per interval
             i++;
         }
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     void Shoot()
     {
         if (_gun.loaded <= 0)
@@ -51,20 +60,63 @@ public class GunController : MonoBehaviour
 
         _audioSource.pitch = Random.Range(0.8f, 1.2f);
         _audioSource.PlayOneShot(_gun.stats.audio, 0.5f);
-        
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 100f, hitLayer))
+
+        for (int j = 0; j < _gun.stats.pellets; j++)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance,
-                Color.yellow);
+            HitScan();
         }
 
         _gun.loaded -= 1;
+    }
+
+    void HitScan()
+    {
+        var rot = transform.rotation.eulerAngles;
+
+        float r = _gun.stats.precision * Mathf.Sqrt(Random.value);
+        float theta = Random.value * 2 * Mathf.PI;
+        
+        rot.x += r * Mathf.Cos(theta);
+        rot.y += r * Mathf.Sin(theta);
+        
+        var dir = Quaternion.Euler(rot) * Vector3.forward;
+
+        print(rot);
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, dir, out hit, 100f, (1 << 6) ^
+                                                                    (1 << 7)))
+        {
+            if (hit.collider.CompareTag("Enemy"))
+            {
+                EnemyInstance ei = hit.collider.GetComponent<EnemyInstance>();
+                ei.Health -= _gun.stats.damage;
+                print(ei.Health);
+            }
+            else
+            {
+                Instantiate(bulletHole, hit.point, Quaternion.Euler(hit.normal));
+            }
+
+
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance,
+                Color.yellow);
+        }
     }
 
     void ChangeGun(int num)
     {
         StaticData.currentGun = num;
         _gun = StaticData.guns[StaticData.currentGun];
+    }
+
+    void Reload()
+    {
+        var space = _gun.stats.maxAmmo - _gun.loaded;
+        
+        var toBeLoaded = Mathf.Min(StaticData.ammo[_gun.stats.ammoType], space);
+        StaticData.ammo[_gun.stats.ammoType] -= toBeLoaded;
+        
+        _gun.loaded += toBeLoaded;
     }
 }
