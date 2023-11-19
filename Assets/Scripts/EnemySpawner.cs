@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -31,6 +32,22 @@ public class EnemySpawner : MonoBehaviour
         enemiesLeft = wave.totalEnemies;
     }
 
+    bool RandomPoint(Vector3 center, float range, out Vector3 result)
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            Vector3 randomPoint = center + UnityEngine.Random.insideUnitSphere * range;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
+            {
+                result = hit.position;
+                return true;
+            }
+        }
+        result = Vector3.zero;
+        return false;
+    }
+
     public void spawnEnemy()
     {
         float randomX = UnityEngine.Random.Range(-maxSpawnRadius, maxSpawnRadius);
@@ -50,7 +67,14 @@ public class EnemySpawner : MonoBehaviour
 
         Vector3 randomPosition = new Vector3(transform.position.x + randomX, yPosition, transform.position.x + randomZ);
         GameObject enemy = Instantiate(enemyPrefab[UnityEngine.Random.Range(0, enemyPrefab.Length - 1)], randomPosition, Quaternion.identity);
-        enemy.GetComponent<EnemyMovement>().target = gameObject.transform;
+        
+        
+        Vector3 point;
+        if(RandomPoint(enemy.transform.position, 10, out point))
+        {
+            enemy.transform.position = point;
+            enemy.GetComponent<EnemyMovement>().target = gameObject.transform;
+        }
     }
 
     void Update()
