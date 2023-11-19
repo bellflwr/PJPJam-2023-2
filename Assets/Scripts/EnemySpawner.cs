@@ -70,11 +70,11 @@ public class EnemySpawner : MonoBehaviour
         enemy.GetComponent<EnemyMovement>().target = gameObject.transform;
         
         
-        // Vector3 point;
-        // if(RandomPoint(enemy.transform.position, 10, out point))
-        // {
-        //     enemy.transform.position = point;
-        // }
+        Vector3 point;
+        if(RandomPoint(enemy.transform.position, 10, out point))
+        {
+            enemy.transform.position = point;
+        }
     }
 
     void Update()

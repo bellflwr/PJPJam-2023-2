@@ -10,9 +10,11 @@ public class EnemyMovement : MonoBehaviour
     private NavMeshAgent agent;
     public bool isGrounded = false;
     public float timeForGrounded = 0;
+    [SerializeField] private bool barnTouched;
 
     void Start()
     {
+        barnTouched = false;
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemyData.speed;
         Rigidbody rb = GetComponent<Rigidbody>();
@@ -24,7 +26,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if(isGrounded)
+        if(isGrounded && !barnTouched)
         {
             if (enemyData.ranged)
             {
@@ -61,5 +63,13 @@ public class EnemyMovement : MonoBehaviour
             timeForGrounded = 0;
         }
         Debug.Log(GetComponent<Rigidbody>().velocity.y);
+    }
+
+    void OnCollisionStay(Collision other)
+    {
+        if(other.gameObject.tag == "Barn")
+        {
+            agent.destination = transform.position;
+        }
     }
 }
