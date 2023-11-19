@@ -50,6 +50,7 @@ public class EnemySpawner : MonoBehaviour
 
         Vector3 randomPosition = new Vector3(transform.position.x + randomX, yPosition, transform.position.x + randomZ);
         GameObject enemy = Instantiate(enemyPrefab[UnityEngine.Random.Range(0, enemyPrefab.Length - 1)], randomPosition, Quaternion.identity);
+        enemy.GetComponent<EnemyMovement>().target = gameObject.transform;
     }
 
     void Update()
