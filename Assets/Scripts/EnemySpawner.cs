@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     public float maxSpawnRadius;
     public Wave wave;
     public int waveNumber;
+    int maxEnemies;
     public int enemiesLeft;
     public float spawnInterval;
     public float maxSpawnInterval;
@@ -19,6 +20,7 @@ public class EnemySpawner : MonoBehaviour
     {
         wave = Resources.Load<Wave>("Waves/1");
         waveNumber = 1;
+        maxEnemies = wave.totalEnemies;
         enemiesLeft = wave.totalEnemies;
     }
 
@@ -54,16 +56,20 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemiesLeft > 0)
         {
-            if (spawnInterval <= 0)
+            if(maxEnemies > 0)
             {
-                spawnEnemy();
-                enemiesLeft--;
-                spawnInterval = maxSpawnInterval;
+                if (spawnInterval <= 0)
+                {
+                    maxEnemies--;
+                    spawnEnemy();
+                    spawnInterval = maxSpawnInterval;
+                }
+                else
+                {
+                    spawnInterval -= Time.deltaTime;
+                }
             }
-            else
-            {
-                spawnInterval -= Time.deltaTime;
-            }
+            
         }
         else
         {
