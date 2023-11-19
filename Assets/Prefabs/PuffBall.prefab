@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: -6311438351519992096}
   - component: {fileID: 1119663543194201607}
   - component: {fileID: 2502469628859285559}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PuffBall
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 116eca66a1f375f4abcf54e051f53910, type: 2}
-  health: 0
 --- !u!54 &-5404818798630624823
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,7 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 116eca66a1f375f4abcf54e051f53910, type: 2}
   target: {fileID: 0}
+  isGrounded: 0
   timeForGrounded: 0
+  barnTouched: 0
 --- !u!195 &1119663543194201607
 NavMeshAgent:
   m_ObjectHideFlags: 0
