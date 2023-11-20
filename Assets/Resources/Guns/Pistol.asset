@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef84027b7099ec84e809ccc91010b2b9, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
   maxAmmo: 16
-  reloadTime: 1.25
+  reloadTime: 1
   fireInterval: 0.1
   ammoType: 0
   automatic: 0
@@ -23,6 +23,7 @@ MonoBehaviour:
   pellets: 1
   precision: 0
   audio: {fileID: 8300000, guid: 8525218ca27058e4dab21941b901e9a0, type: 3}
-  click: {fileID: 0}
-  reloadStart: {fileID: 0}
-  reloadEnd: {fileID: 0}
+  click: {fileID: 8300000, guid: 6725b637a1998024fa7d143f4e2d378c, type: 3}
+  reloadStart: {fileID: 8300000, guid: 4005e2c6a0dd52347a8976e4cae1d22a, type: 3}
+  reloadEnd: {fileID: 8300000, guid: b8b3eb947ede05048b80c3134a2c64da, type: 3}
+  model: {fileID: 3755646753182533125, guid: ee8efea7d6f777842ab93a102127a6d5, type: 3}

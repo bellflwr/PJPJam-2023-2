@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GunData defaultGun;
+    public GunData defaultGun1;
+    public GunData defaultGun2;
+    public GunData defaultGun3;
     public Transform directionalLight;
     float currentIntensity;
     
@@ -12,9 +14,18 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        StaticData.guns[0] = GunInstance.CreateLoaded(defaultGun);
-        StaticData.guns[1] = null;
-        StaticData.guns[2] = null;
+        if (defaultGun1 != null)
+        {
+            StaticData.guns[0] = GunInstance.CreateLoaded(defaultGun1);
+        }
+        if (defaultGun2 != null)
+        {
+            StaticData.guns[1] = GunInstance.CreateLoaded(defaultGun2);
+        }
+        if (defaultGun3 != null)
+        {
+            StaticData.guns[2] = GunInstance.CreateLoaded(defaultGun3);
+        }
     }
 
     private void Update()
