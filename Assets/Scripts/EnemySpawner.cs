@@ -18,7 +18,8 @@ public class EnemySpawner : MonoBehaviour
     public int enemiesLeft;
     public float spawnInterval;
     public float maxSpawnInterval;
-    public Text nextWaveText;
+    [SerializeField] Text nextWaveText;
+    [SerializeField] private Text enemiesLeftText;
 
     public void Awake()
     {
@@ -84,7 +85,9 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-     nextWaveText.text = "Wave " + waveNumber;   
+        nextWaveText.text = "Wave " + waveNumber;   
+        enemiesLeftText.text = "Enemies Left: " + enemiesLeft;
+
         if (enemiesLeft > 0)
         {
             if(maxEnemies > 0)
