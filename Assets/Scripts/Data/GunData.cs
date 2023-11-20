@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Gun", menuName = "Gun")]
@@ -19,6 +20,8 @@ public class GunData : ScriptableObject
     public AudioClip click;
     public AudioClip reloadStart;
     public AudioClip reloadEnd;
+
+    [CanBeNull] public GameObject model;
 
 
 

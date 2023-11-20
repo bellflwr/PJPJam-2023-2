@@ -14,11 +14,15 @@ public class GunController : MonoBehaviour
 
     private GunInstance _gun;
     private AudioSource _audioSource;
+    private Transform _hand;
 
     private void Start()
     {
-        ChangeGun(0);
+        _hand = transform.Find("Hand");
         _audioSource = GetComponent<AudioSource>();
+        ChangeGun(0);
+        
+        
     }
 
     void Update()
@@ -34,6 +38,29 @@ public class GunController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && !_isReloading)
         {
             Reload();
+        }
+        
+        var scroll = Mathf.RoundToInt(Input.mouseScrollDelta.y);
+        
+        if (scroll != 0 && !_isReloading)
+        {
+            var nextGun = (StaticData.currentGun + scroll) % 3;
+            if (nextGun < 0)
+            {
+                nextGun += 3;
+            }
+            
+            while (StaticData.guns[nextGun] == null)
+            {
+                nextGun = (nextGun + scroll) % 3;
+                if (nextGun < 0)
+                {
+                    nextGun += 3;
+                }
+            }
+            
+            ChangeGun(nextGun);
+
         }
     }
 
@@ -111,6 +138,15 @@ public class GunController : MonoBehaviour
     {
         StaticData.currentGun = num;
         _gun = StaticData.guns[StaticData.currentGun];
+
+        if (_hand.childCount > 0)
+        {
+            Destroy(_hand.GetChild(0).gameObject);
+        }
+        if (_gun.stats.model != null)
+        {
+            Instantiate(_gun.stats.model, _hand);
+        }
     }
 
 

@@ -67,7 +67,7 @@ public class EnemyMovement : MonoBehaviour
         } else if(!isGrounded){
             timeForGrounded = 0;
         }
-        Debug.Log(GetComponent<Rigidbody>().velocity.y);
+        // Debug.Log(GetComponent<Rigidbody>().velocity.y);
     }
 
     void OnCollisionStay(Collision other)

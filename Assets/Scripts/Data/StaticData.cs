@@ -6,7 +6,7 @@ using static GunData;
 
 public class StaticData : MonoBehaviour
 {
-    public static GunInstance[] guns = new GunInstance[3];
+    public static GunInstance[] guns = new GunInstance[3] {null, null, null};
     public static int currentGun = 0;
 
     public static Dictionary<AmmoType, int> ammo = new()

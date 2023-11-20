@@ -23,3 +23,6 @@ MonoBehaviour:
   pellets: 1
   precision: 3
   audio: {fileID: 8300000, guid: 8525218ca27058e4dab21941b901e9a0, type: 3}
+  click: {fileID: 8300000, guid: 6725b637a1998024fa7d143f4e2d378c, type: 3}
+  reloadStart: {fileID: 8300000, guid: 4005e2c6a0dd52347a8976e4cae1d22a, type: 3}
+  reloadEnd: {fileID: 8300000, guid: b8b3eb947ede05048b80c3134a2c64da, type: 3}

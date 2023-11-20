@@ -528,7 +528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ac357acc756cb44b2d524207692973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultGun: {fileID: 11400000, guid: d919d2fb8401b1e4284372b7a68a3181, type: 2}
+  defaultGun1: {fileID: 11400000, guid: ebef6d012f5e35c479662ecd88ac17a7, type: 2}
+  defaultGun2: {fileID: 11400000, guid: 9f12fdf660cf09c4caffb9fcb096b17b, type: 2}
+  defaultGun3: {fileID: 11400000, guid: 7d8ae5e8962db1145aa5e370eba02893, type: 2}
+  directionalLight: {fileID: 184818896}
+  sunDirection: {x: 0, y: 0, z: 0}
 --- !u!4 &903930784
 Transform:
   m_ObjectHideFlags: 0
