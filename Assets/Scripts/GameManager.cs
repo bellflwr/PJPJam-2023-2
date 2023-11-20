@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         sunDirection = directionalLight.rotation * Vector3.forward;
-        currentIntensity = .85f * sunDirection.z + 1.15f;
-        Debug.Log(currentIntensity);        
+        currentIntensity = .6f * sunDirection.z + .9f;
+        RenderSettings.ambientIntensity = currentIntensity;        
     }
 }

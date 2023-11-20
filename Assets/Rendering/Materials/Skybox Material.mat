@@ -39,8 +39,8 @@ Material:
     m_Floats:
     - _Blend: 0.1
     - _DayNightSlider: 0
-    - _Horizontal_Blend: 12.3
-    - _Nadir_Blend: 0.7
+    - _Horizontal_Blend: 10.3
+    - _Nadir_Blend: 0.1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Star_Height: 489.3
@@ -49,12 +49,12 @@ Material:
     - _Star_Speed: 6.18
     m_Colors:
     - _Ground_Color: {r: 0.1745283, g: 0.2419948, b: 1, a: 0}
-    - _Horizontal_Color: {r: 0.16509432, g: 0.6922306, b: 1, a: 0}
+    - _Horizontal_Color: {r: 0, g: 0.63362074, b: 1, a: 0}
     - _Night_Color: {r: 0.003921569, g: 0.05882353, b: 0.1490196, a: 0}
     - _Night_Ground_Color: {r: 0, g: 0, b: 0, a: 0}
     - _Night_Horizon_Color: {r: 0, g: 0, b: 0, a: 0}
     - _Night_Sky_Color: {r: 0.003921569, g: 0.05882353, b: 0.1490196, a: 0}
-    - _Sky_Color: {r: 0, g: 1.3119625, b: 2.1915438, a: 0}
+    - _Sky_Color: {r: 0, g: 0.65598124, b: 1.0957719, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3083250345819596316
 MonoBehaviour:
