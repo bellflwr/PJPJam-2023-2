@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10565274, g: 0.5925148, b: 0.99599296, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999946, g: 0, b: 0.99999946, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -226,17 +226,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2208725946280900892, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4493578288928626589, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 8189883365164331471, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.2556
+      value: -3.2556152
       objectReference: {fileID: 0}
     - target: {fileID: 8189883365164331471, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.26104736
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775682368277815980, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.22175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775682368277815980, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.8828902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775682368277815980, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1.6739998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775682368277815980, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.47649956
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775682368277815980, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.3370361
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775682368277815980, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.2601013
       objectReference: {fileID: 0}
     - target: {fileID: 8831881415212619414, guid: 0b3074d0171d69b4b8982bdd0d1fba5e, type: 3}
       propertyPath: m_IsActive
@@ -972,10 +1000,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 116051358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -318.71686, y: -251.01309}
-  m_SizeDelta: {x: 313.5664, y: 32.9739}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.48275003, y: 0.16810744}
+  m_AnchoredPosition: {x: 1.598938, y: 0.25}
+  m_SizeDelta: {x: 4.1978, y: -0.49998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359789317
 MonoBehaviour:
@@ -1019,7 +1047,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 209
-    m_Alignment: 0
+    m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
