@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour
     public bool isGrounded = false;
     public float timeForGrounded = 0;
     [SerializeField] private bool barnTouched;
+    public bool doneMoving = false;
 
     void Start()
     {
@@ -41,6 +42,7 @@ public class EnemyMovement : MonoBehaviour
                 }
                 else
                 {
+                    doneMoving = true;
                     agent.destination = target.position;
                 }
             } 
@@ -75,6 +77,7 @@ public class EnemyMovement : MonoBehaviour
         if(other.gameObject.tag == "Barn")
         {
             agent.destination = transform.position;
+            doneMoving = true;
         }
     }
 }
