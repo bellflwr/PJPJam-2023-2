@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef84027b7099ec84e809ccc91010b2b9, type: 3}
   m_Name: ShotGun
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 80
   maxAmmo: 8
   reloadTime: 1.5
   fireInterval: 0.8

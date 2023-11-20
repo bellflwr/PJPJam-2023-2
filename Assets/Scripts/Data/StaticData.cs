@@ -11,9 +11,9 @@ public class StaticData : MonoBehaviour
 
     public static Dictionary<AmmoType, int> ammo = new()
     {
-        { AmmoType.Light, 100 },
-        { AmmoType.Medium, 100 },
-        { AmmoType.Heavy, 100 },
-        { AmmoType.Shells, 100 },
+        { AmmoType.Light, 1000000000 },
+        { AmmoType.Medium, 1000000000 },
+        { AmmoType.Heavy, 1000000000 },
+        { AmmoType.Shells, 1000000000 },
     };
 }

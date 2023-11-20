@@ -21,8 +21,7 @@ public class EnemySpawner : MonoBehaviour
     public float maxSpawnInterval;
     [SerializeField] Text nextWaveText;
     [SerializeField] private Text enemiesLeftText;
-    [SerializeField] private Text winText;
-    [SerializeField] private Animator winAnimator;
+    [SerializeField] private GameObject winText;
     private bool won;
 
     public void Awake()
@@ -49,7 +48,7 @@ public class EnemySpawner : MonoBehaviour
 
     public IEnumerator win()
     {
-        winAnimator.Play("YouWin");
+        winText.SetActive(true);
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(0);
     }
