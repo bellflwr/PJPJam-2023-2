@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Dandilion
   m_EditorClassIdentifier: 
   maxHealth: 100
-  damage: 30
-  hitrate: 0.75
+  damage: 10
+  hitrate: 1
   speed: 20
   ranged: 0
   range: 0

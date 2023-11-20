@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
     public int enemiesLeft;
     public float spawnInterval;
     public float maxSpawnInterval;
+    public Text nextWaveText;
 
     public void Awake()
     {
@@ -29,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
     {
         waveNumber++;
         wave = Resources.Load<Wave>("Waves/" + waveNumber);
-        enemiesLeft = wave.totalEnemies;
+        enemiesLeft = wave.totalEnemies; 
         maxEnemies = wave.totalEnemies;
     }
 
@@ -81,7 +84,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        
+     nextWaveText.text = "Wave " + waveNumber;   
         if (enemiesLeft > 0)
         {
             if(maxEnemies > 0)
