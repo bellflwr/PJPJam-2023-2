@@ -4,17 +4,21 @@ using System.Collections.Generic;
 using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Barn : MonoBehaviour
 {
     [SerializeField] GameObject barn;
+    private float maxHealth;
     public float health;
     [SerializeField] GameObject loseScreen;
     [SerializeField] Animator animator;
     [SerializeField] ParticleSystem loseParticles;
+    [SerializeField] Text healthText;
 
     public void Awake()
     {
+        maxHealth = health;
         animator = loseScreen.GetComponent<Animator>();
     }
 
@@ -31,6 +35,7 @@ public class Barn : MonoBehaviour
 
     void Update()
     {
+        healthText.text = "Fertilizer Health:" + health + "/" + maxHealth; 
         if (health <= 0)
         {
             StartCoroutine(Lose());

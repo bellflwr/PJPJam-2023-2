@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef84027b7099ec84e809ccc91010b2b9, type: 3}
   m_Name: BurstRifle
   m_EditorClassIdentifier: 
-  damage: 8
+  damage: 30
   maxAmmo: 15
   reloadTime: 1.5
   fireInterval: 0.4
@@ -23,3 +23,6 @@ MonoBehaviour:
   pellets: 1
   precision: 3
   audio: {fileID: 8300000, guid: 8525218ca27058e4dab21941b901e9a0, type: 3}
+  click: {fileID: 0}
+  reloadStart: {fileID: 0}
+  reloadEnd: {fileID: 0}

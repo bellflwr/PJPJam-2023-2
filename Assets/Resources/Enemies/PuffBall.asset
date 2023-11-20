@@ -15,6 +15,6 @@ MonoBehaviour:
   maxHealth: 100
   damage: 15
   hitrate: 2
-  speed: 15
+  speed: 5
   ranged: 1
   range: 20
