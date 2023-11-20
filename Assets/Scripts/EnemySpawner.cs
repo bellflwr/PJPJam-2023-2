@@ -5,6 +5,7 @@ using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
@@ -20,6 +21,9 @@ public class EnemySpawner : MonoBehaviour
     public float maxSpawnInterval;
     [SerializeField] Text nextWaveText;
     [SerializeField] private Text enemiesLeftText;
+    [SerializeField] private Text winText;
+    [SerializeField] private Animator winAnimator;
+    private bool won;
 
     public void Awake()
     {
@@ -27,14 +31,27 @@ public class EnemySpawner : MonoBehaviour
         waveNumber = 1;
         maxEnemies = wave.totalEnemies;
         enemiesLeft = wave.totalEnemies;
+        won = false;
     }
 
     public void nextWave()
     {
-        waveNumber++;
-        wave = Resources.Load<Wave>("Waves/" + waveNumber);
-        enemiesLeft = wave.totalEnemies; 
-        maxEnemies = wave.totalEnemies;
+        if(waveNumber < 15){
+            waveNumber++;
+            wave = Resources.Load<Wave>("Waves/" + waveNumber);
+            enemiesLeft = wave.totalEnemies; 
+            maxEnemies = wave.totalEnemies;
+        } else {
+            won = true;
+            StartCoroutine(win());
+        }
+    }
+
+    public IEnumerator win()
+    {
+        winAnimator.Play("YouWin");
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(0);
     }
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
@@ -98,7 +115,7 @@ public class EnemySpawner : MonoBehaviour
                     spawnEnemy();
                     spawnInterval = maxSpawnInterval;
                 }
-                else
+                else if(won == false)
                 {
                     spawnInterval -= Time.deltaTime;
                 }
